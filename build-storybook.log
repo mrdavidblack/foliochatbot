@@ -1,0 +1,30 @@
+
+> nextjs-typescript-tailwind@0.1.0 build-storybook
+> storybook build --output-dir=/var/folders/hq/5qpch_69697d7bc2txc5t_bc0000gn/T/chromatic--14252-cLMWa8L29wF3
+
+[1m@storybook/core v8.6.14
+[22m
+info => Cleaning outputDir: [36m../../../../../../../../../../var/folders/hq/5qpch_69697d7bc2txc5t_bc0000gn/T/chromatic--14252-cLMWa8L29wF3[39m
+info => Loading presets
+info => Building manager..
+info => Manager built ([38;2;181;126;229m408 ms[39m)
+info => Building preview..
+info Addon-docs: using MDX3
+info => Using implicit CSS loaders
+info => Using default Webpack5 setup
+info Using tsconfig paths for react-docgen
+WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+WARN This can impact web performance.
+WARN Assets: 
+WARN   143.92a7fdbc.iframe.bundle.js (516 KiB)
+WARN   878.7b414225.iframe.bundle.js (985 KiB)
+WARN   1.68fc7834.iframe.bundle.js (930 KiB)
+WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+WARN Entrypoints:
+WARN   main (531 KiB)
+WARN       runtime~main.ddab1c45.iframe.bundle.js
+WARN       143.92a7fdbc.iframe.bundle.js
+WARN       main.fe97738d.iframe.bundle.js
+WARN 
+info => Preview built ([38;2;181;126;229m31 s[39m)
+info => Output directory: /var/folders/hq/5qpch_69697d7bc2txc5t_bc0000gn/T/chromatic--14252-cLMWa8L29wF3

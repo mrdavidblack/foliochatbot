@@ -73,7 +73,7 @@ export default function ButtonDemo() {
                   disabled
                   onClick={() => alert('This should not show')}
                 >
-                  Won't Work
+                  Won&apos;t Work
                 </Button>
               </div>
             </div>
