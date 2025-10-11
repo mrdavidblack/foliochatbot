@@ -63,6 +63,11 @@ export async function POST(request: NextRequest) {
     
     // --- Get relevant case studies ---
     const relatedCases = topRelevantCases(question, 2);
+    
+    // Debug logging
+    console.log('Question:', question);
+    console.log('Related cases found:', relatedCases.length);
+    console.log('Case titles:', relatedCases.map(c => c.title));
 
     // --- Build the seeded system prompt with profile and case studies ---
     const systemPrompt =
