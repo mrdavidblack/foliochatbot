@@ -287,7 +287,7 @@ export default function ChatWidgetPage() {
       >
         {messages.length === 0 && (
           <div style={{ opacity: .7, fontSize: 14, color: '#e5e8ee' }}>
-            <p style={{ marginBottom: 12 }}>👋 Hi! I'm DaveBot.</p>
+            <p style={{ marginBottom: 12 }}>👋 Hi! I&apos;m DaveBot.</p>
             <p>Ask about experience, tools, projects, or availability.</p>
           </div>
         )}
