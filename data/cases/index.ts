@@ -7,6 +7,8 @@ export { CASE_EUROSTAR } from './eurostar';
 export { CASE_VICROADS } from './vicroads';
 export { CASE_SPYSCAPE } from './spyscape';
 export { CASE_TWO_MINUTE_SHOWCASE } from './two-minute-showcase';
+export { CASE_LATROBE_HEALTH } from './latrobe-health';
+export { CASE_EUROSTAR_DESIGN_SYSTEM } from './eurostar-design-system';
 
 import { CASE_CHARLES_TYRWHITT } from './charles-tyrwhitt';
 import { CASE_FORTNUM_MASON } from './fortnum-mason';
@@ -16,6 +18,8 @@ import { CASE_EUROSTAR } from './eurostar';
 import { CASE_VICROADS } from './vicroads';
 import { CASE_SPYSCAPE } from './spyscape';
 import { CASE_TWO_MINUTE_SHOWCASE } from './two-minute-showcase';
+import { CASE_LATROBE_HEALTH } from './latrobe-health';
+import { CASE_EUROSTAR_DESIGN_SYSTEM } from './eurostar-design-system';
 
 export const CASE_STUDIES = [
   CASE_CHARLES_TYRWHITT,
@@ -25,6 +29,8 @@ export const CASE_STUDIES = [
   CASE_EUROSTAR,
   CASE_VICROADS,
   CASE_SPYSCAPE,
-  CASE_TWO_MINUTE_SHOWCASE
+  CASE_TWO_MINUTE_SHOWCASE,
+  CASE_LATROBE_HEALTH,
+  CASE_EUROSTAR_DESIGN_SYSTEM
 ];
 
