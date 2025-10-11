@@ -1,5 +1,48 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { DAVE_PROFILE } from '../../../data/dave'; // adjust to '@/data/dave' if you have a path alias
+import { DAVE_PROFILE } from '../../../data/dave';
+import { CASE_STUDIES } from '../../../data/cases';
+
+// --- Tiny retrieval helpers ---
+function extractKeywords(text: string): string[] {
+  return text.toLowerCase()
+    .replace(/[^\w\s]/g, ' ')
+    .split(/\s+/)
+    .filter(word => word.length > 2);
+}
+
+function scoreCase(caseStudy: any, queryKeywords: string[]): number {
+  const caseKeywords = caseStudy.keywords.map((k: string) => k.toLowerCase());
+  const caseText = [
+    caseStudy.title,
+    caseStudy.challenge,
+    ...caseStudy.approach,
+    ...caseStudy.outcome
+  ].join(' ').toLowerCase();
+  
+  let score = 0;
+  
+  // Direct keyword matches (high weight)
+  queryKeywords.forEach(qk => {
+    if (caseKeywords.includes(qk)) score += 3;
+    if (caseText.includes(qk)) score += 1;
+  });
+  
+  return score;
+}
+
+function topRelevantCases(question: string, limit: number = 2) {
+  const queryKeywords = extractKeywords(question);
+  
+  const scored = CASE_STUDIES.map(cs => ({
+    case: cs,
+    score: scoreCase(cs, queryKeywords)
+  }))
+  .filter(item => item.score > 0)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, limit);
+  
+  return scored.map(item => item.case);
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,7 +57,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'OpenAI API key not configured' }, { status: 500 });
     }
 
-    // --- Build the seeded system prompt with your profile ---
+    // --- Extract question from last user message ---
+    const lastUserMessage = [...messages].reverse().find(m => m.role === 'user');
+    const question = lastUserMessage?.content || '';
+    
+    // --- Get relevant case studies ---
+    const relatedCases = topRelevantCases(question, 2);
+
+    // --- Build the seeded system prompt with profile and case studies ---
     const systemPrompt =
       `You are DAVE:5000, a helpful assistant representing designer David Black.
 
@@ -26,16 +76,19 @@ PERSONALITY & TONE:
 - Show enthusiasm for David's work without being salesy
 
 RESPONSE GUIDELINES:
-- Answer using ONLY the profile data below
-- Keep responses focused and scannable (2-4 short paragraphs max)
+- Answer using ONLY the profile and case study data below
+- Keep responses focused and scannable: one-line summary + up to 3 bullets
 - Use **bold** for emphasis on key skills or achievements
 - When listing items, use bullets (•) or asterisks (*)
-- If the question is off-topic, politely redirect: "I'm here to chat about David's work and experience. How can I help with that?"
-- Include helpful next steps when relevant (e.g., "Want to see his portfolio?" or "Feel free to reach out at hello@david.black")
+- If the question is not covered in profile/case studies, say: "Not in my profile or case studies, but feel free to reach out at hello@david.black"
+- Include helpful links when relevant (portfolio, case studies)
 - If asked about availability, be clear and direct
 
 PROFILE DATA:
 ${JSON.stringify(DAVE_PROFILE, null, 2)}
+
+CASE STUDIES:
+${JSON.stringify(relatedCases, null, 2)}
 
 Remember: Be helpful, be human, be brief.`;
 
