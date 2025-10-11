@@ -287,7 +287,7 @@ export default function ChatWidgetPage() {
       >
         {messages.length === 0 && (
           <div style={{ opacity: .7, fontSize: 14, color: '#e5e8ee' }}>
-            <p style={{ marginBottom: 12 }}>👋 Hi! I&apos;m DaveBot.</p>
+            <p style={{ marginBottom: 12 }}>👋 Hi! I&apos;m DAVE:5000.</p>
             <p>Ask about experience, tools, projects, or availability.</p>
           </div>
         )}
@@ -303,7 +303,7 @@ export default function ChatWidgetPage() {
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 4 }}>
               <strong style={{ fontSize: 13, color: m.error ? '#ef4444' : '#e5e8ee' }}>
-                {m.role === 'user' ? 'You' : 'DaveBot'}
+                {m.role === 'user' ? 'You' : 'DAVE:5000'}
               </strong>
               <span style={{ fontSize: 10, opacity: 0.5 }}>{formatTime(m.timestamp)}</span>
             </div>
@@ -348,7 +348,7 @@ export default function ChatWidgetPage() {
             alignItems: 'center',
             gap: 6
           }}>
-            <span>DaveBot is typing</span>
+            <span>DAVE:5000 is typing</span>
             <span style={{ 
               display: 'inline-flex',
               gap: 2

@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
 
     // --- Build the seeded system prompt with your profile ---
     const systemPrompt =
-      `You are DaveBot, a helpful assistant representing designer David Black.
+      `You are DAVE:5000, a helpful assistant representing designer David Black.
 
 PERSONALITY & TONE:
 - Friendly, professional, conversational
