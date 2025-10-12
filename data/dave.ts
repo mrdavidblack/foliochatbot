@@ -212,7 +212,7 @@ export const DAVE_PROFILE = {
     }
   ],
   education: {
-    degree: "Bachelor of Design",
+    degree: "Bachelor of Design (Industrial)",
     institution: "University of Technology, Sydney",
     year: "2000"
   },
@@ -267,6 +267,10 @@ export const DAVE_PROFILE = {
     {
       q: "Can you code?",
       a: "I'm beginner-intermediate with Next.js, React, TypeScript, and TailwindCSS. I use Cursor for AI-assisted development and built this chatbot. I bridge design and engineering well but I'm a designer first."
+    },
+    {
+      q: "What are your qualifications?",
+      a: "Bachelor of Design (Industrial) from University of Technology, Sydney, 2000. 20+ years professional experience with 8 years focused on digital product design."
     }
   ]
 };
