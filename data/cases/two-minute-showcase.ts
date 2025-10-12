@@ -7,6 +7,14 @@ export const CASE_TWO_MINUTE_SHOWCASE = {
   role: "Portfolio Showcase",
   keywords: ["showcase", "portfolio", "process", "methodology", "discover", "define", "develop", "deliver", "overview", "projects"],
   
+  headline: "Comprehensive overview of design process and 20+ years experience across mobile, web, enterprise, e-commerce, and booking systems.",
+  
+  bullets: [
+    "Process: Discover (user research, competitive analysis) → Define (problem framing, journey mapping, success metrics) → Develop (ideation, prototyping, testing) → Deliver (design systems, handoff, implementation)",
+    "Experience: 20+ years design with 8 years focused on digital products, industrial design background informing human-centered digital design",
+    "Impact: demonstrates end-to-end capabilities across diverse industries including travel, healthcare, retail, government, agribusiness"
+  ],
+  
   challenge:
     "A comprehensive overview of design process, methodology, and selected projects demonstrating end-to-end product design capabilities.",
   

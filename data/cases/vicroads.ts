@@ -7,6 +7,14 @@ export const CASE_VICROADS = {
   role: "Senior Product Designer",
   keywords: ["vicroads", "government", "digital", "victoria", "vic", "public", "sector", "licensing", "automotive", "australia"],
   
+  headline: "Led exploration and design of a new website for Victoria's driver licensing and vehicle registration body.",
+  
+  bullets: [
+    "Problem: outdated digital services needed modernization for Victorian drivers and vehicle owners",
+    "Approach: conducted user research with diverse demographics, designed accessible interfaces within government regulations, created scalable design patterns",
+    "Impact: set up a new tokenised design system, improved digital service experience and accessibility for Victorian residents"
+  ],
+  
   challenge:
     "VicRoads required a digital transformation to modernize their customer-facing services for Victorian drivers and vehicle owners.",
   

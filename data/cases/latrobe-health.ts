@@ -7,6 +7,14 @@ export const CASE_LATROBE_HEALTH = {
   role: "Lead Product Designer",
   keywords: ["latrobe", "health", "healthcare", "medical", "australia", "digital", "patient", "hospital", "clinical"],
   
+  headline: "Designed a new sales funnel for Latrobe Health Services in six weeks at SixSix consultancy.",
+  
+  bullets: [
+    "Problem: digital healthcare services needed modernization to improve patient experience and streamline clinical workflows",
+    "Approach: conducted user research with patients and healthcare professionals, designed patient portals, improved appointment booking, enhanced clinical workflow tools within healthcare regulations",
+    "Impact: improved patient satisfaction, streamlined appointment booking, enhanced clinical efficiency, reduced administrative burden for healthcare staff"
+  ],
+  
   challenge:
     "Latrobe Health needed to modernize their digital healthcare services to improve patient experience and streamline clinical workflows.",
   

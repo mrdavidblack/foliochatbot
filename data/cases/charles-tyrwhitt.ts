@@ -7,6 +7,14 @@ export const CASE_CHARLES_TYRWHITT = {
   role: "Lead Product Designer",
   keywords: ["charles", "tyrwhitt", "ecommerce", "e-commerce", "retail", "fashion", "clothing", "conversion", "shopping", "cro"],
   
+  headline: "Led team of three in global e-commerce redesign for British menswear brand, achieving 17% sales increase.",
+  
+  bullets: [
+    "Problem: e-commerce experience needed optimization to increase conversions and improve shopping journey for British menswear customers",
+    "Approach: led complete site redesign with CRO strategies, improved product discovery and navigation, streamlined checkout, enhanced mobile experience",
+    "Impact: 17% increase in overall sales, improved conversion rates across the funnel, increased mobile commerce performance"
+  ],
+  
   challenge:
     "Charles Tyrwhitt needed to optimize their e-commerce experience to increase conversions and improve the shopping journey for their British menswear customers.",
   

@@ -7,6 +7,14 @@ export const CASE_EUROSTAR_DESIGN_SYSTEM = {
   role: "Lead Product Designer / Design System Architect",
   keywords: ["eurostar", "design system", "component library", "tokens", "design tokens", "storybook", "ui library", "pattern library"],
   
+  headline: "Led development of a new design system in four months, achieving 50% faster design-to-development handoff.",
+  
+  bullets: [
+    "Problem: needed comprehensive design system to ensure consistency across digital products and enable faster, more efficient design and development",
+    "Approach: built design system from foundation to components with design tokens, developed component library in Figma, created Storybook documentation, trained teams on system usage",
+    "Impact: 50% faster design-to-development handoff, consistent brand experience across all digital touchpoints, adopted across multiple Eurostar digital products"
+  ],
+  
   challenge:
     "Eurostar needed a comprehensive design system to ensure consistency across their digital products and enable faster, more efficient design and development.",
   

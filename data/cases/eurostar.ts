@@ -7,6 +7,14 @@ export const CASE_EUROSTAR = {
   role: "Lead Product Designer",
   keywords: ["eurostar", "travel", "booking", "mobile", "train", "rail", "tickets", "europe", "transportation"],
   
+  headline: "Redesigned ticket booking flow for European rail carrier, achieving 18% conversion increase.",
+  
+  bullets: [
+    "Problem: complex booking flow with issues in schedule display, fare selection, seat selection, and checkout causing abandonment",
+    "Approach: redesigned complete booking experience, simplified fare comparison, enhanced seat selection visuals, streamlined checkout, optimized mobile flows",
+    "Impact: conversions increased by 18%, 15% increase in mobile bookings, improved customer satisfaction, reduced abandonment rates"
+  ],
+  
   challenge:
     "Eurostar's ticket booking experience had issues with train schedule information, fare types, seat selection, and checkout. The experience needed optimization for both desktop and mobile users.",
   

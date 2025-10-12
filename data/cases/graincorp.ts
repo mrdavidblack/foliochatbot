@@ -7,6 +7,14 @@ export const CASE_GRAINCORP = {
   role: "Senior Product Designer",
   keywords: ["graincorp", "agribusiness", "australia", "platform", "portal", "agriculture", "b2b", "enterprise", "farming"],
   
+  headline: "Delivered a future state product proposition for enterprise agribusiness GrainCorp in two months at SixSix consultancy.",
+  
+  bullets: [
+    "Problem: existing systems didn't meet varied needs of farmers, traders, and logistics partners across Australian agricultural industry",
+    "Approach: designed comprehensive new customer portal connecting diverse customer needs, created B2B enterprise-level functionality, presented to board and executive leadership",
+    "Impact: new customer portal approved by board of directors, successfully connected diverse stakeholder needs, laid foundation for digital transformation in Australian agribusiness"
+  ],
+  
   challenge:
     "GrainCorp needed a new digital platform to connect their diverse customer base across the Australian agricultural industry. The existing systems didn't meet the varied needs of farmers, traders, and logistics partners.",
   

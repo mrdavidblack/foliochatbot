@@ -132,23 +132,29 @@ export default function ChatWidgetPage() {
     // Enhanced markdown-like formatting with links and lists
     let formatted = content;
     
-    // Convert markdown links [text](url) to HTML
+    // First, protect existing markdown links by converting them to HTML
     formatted = formatted.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline;">$1</a>');
-    
-    // Convert plain URLs to clickable links
-    formatted = formatted.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline;">$1</a>');
-    
-    // Convert email addresses to mailto links
-    formatted = formatted.replace(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/g, '<a href="mailto:$1" style="color: #60a5fa; text-decoration: underline;">$1</a>');
     
     // Bold text **text**
     formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     
-    // Italic text *text*
-    formatted = formatted.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    // Convert standalone email addresses to mailto links
+    // Match emails not already in href or mailto
+    const emailRegex = /\b([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)\b/g;
+    formatted = formatted.replace(emailRegex, (match, email, offset) => {
+      // Check if this email is already part of an href or mailto
+      const before = formatted.substring(Math.max(0, offset - 20), offset);
+      if (before.includes('href=') || before.includes('mailto:')) {
+        return match;
+      }
+      return `<a href="mailto:${email}" style="color: #60a5fa; text-decoration: underline;">${email}</a>`;
+    });
     
-    // Convert bullet points (•, -, *) at start of line to proper list items
-    formatted = formatted.replace(/^[•\-\*]\s+(.+)$/gm, '<span style="display: block; padding-left: 12px; position: relative;"><span style="position: absolute; left: 0;">•</span>$1</span>');
+    // Italic text *text* (single asterisks, not already used in bold)
+    formatted = formatted.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    
+    // Convert bullet points (•, -) at start of line to proper list items
+    formatted = formatted.replace(/^[•\-]\s+(.+)$/gm, '<span style="display: block; padding-left: 12px; position: relative;"><span style="position: absolute; left: 0;">•</span>$1</span>');
     
     // Line breaks
     formatted = formatted.replace(/\n/g, '<br />');

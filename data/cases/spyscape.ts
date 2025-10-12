@@ -7,6 +7,14 @@ export const CASE_SPYSCAPE = {
   role: "Lead Product Designer",
   keywords: ["spyscape", "museum", "nyc", "new york", "tourist", "attraction", "digital", "interactive", "experience", "spy"],
   
+  headline: "Led design of sites and apps for NYC spy museum, restructuring information architecture for a network of 8 different sites.",
+  
+  bullets: [
+    "Problem: needed engaging digital products for NYC's top spy museum, blending physical and digital interactions for diverse tourist audiences",
+    "Approach: designed interactive digital touchpoints throughout venue, developed visitor engagement and personalization features, balanced storytelling with technology",
+    "Impact: restructured information architecture to enable a network of 8 different sites, enhanced visitor experience, created memorable personalized museum journey"
+  ],
+  
   challenge:
     "Spyscape needed to create engaging digital products for NYC's top spy museum experience, blending physical and digital interactions for visitors.",
   

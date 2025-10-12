@@ -7,6 +7,14 @@ export const CASE_FORTNUM_MASON = {
   role: "Senior Product Designer",
   keywords: ["fortnum", "mason", "luxury", "ecommerce", "e-commerce", "retail", "premium", "checkout", "department", "british"],
   
+  headline: "Led redesign of iconic 300-year luxury brand's global e-commerce site, achieving 12% sales increase.",
+  
+  bullets: [
+    "Problem: e-commerce experience needed to match 300-year heritage of luxury while improving checkout conversions and complex order scenarios",
+    "Approach: redesigned site with brand sophistication emphasis, improved checkout for complex scenarios (split shipments, gift wrapping), enhanced luxury product presentation",
+    "Impact: 12% increase in overall sales, 17% increase in complex split shipment checkouts, elevated brand perception online"
+  ],
+  
   challenge:
     "Fortnum & Mason needed an e-commerce experience that matched their 300-year heritage of luxury and sophistication, while improving checkout conversions and handling complex order scenarios.",
   

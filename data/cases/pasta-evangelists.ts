@@ -7,6 +7,14 @@ export const CASE_PASTA_EVANGELISTS = {
   role: "Lead Product Designer",
   keywords: ["pasta", "evangelists", "subscription", "ecommerce", "e-commerce", "food", "delivery", "saas", "recurring", "account"],
   
+  headline: "Redesigned subscription e-commerce site achieving 23% sales increase and 20% reduction in support calls.",
+  
+  bullets: [
+    "Problem: user account issues and poor subscription flows causing support burden and lost upsell opportunities",
+    "Approach: redesigned complete e-commerce site, improved subscription management, streamlined checkout, enhanced account portal, reduced friction points",
+    "Impact: 23% sales increase, 16% boost in double-portion orders, 20% reduction in help center calls, 14% increase in subscription value, 8% rise in checkout conversions"
+  ],
+  
   challenge:
     "Pasta Evangelists faced user account issues and needed to improve key e-commerce flows. The subscription service needed better UX to increase order values and reduce support burden.",
   
