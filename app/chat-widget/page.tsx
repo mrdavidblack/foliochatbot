@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { track } from '@/app/lib/track';
 
 type Message = { 
   role: string; 
@@ -29,6 +30,11 @@ export default function ChatWidgetPage() {
         console.error('Failed to load messages:', e);
       }
     }
+  }, []);
+
+  // Track chat opened on mount
+  React.useEffect(() => {
+    track('chat_opened');
   }, []);
 
   // Save messages to localStorage
@@ -60,6 +66,9 @@ export default function ChatWidgetPage() {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
+    // Track message sent
+    track('chat_message_sent', { length: input.length });
+
     const userMessage: Message = { 
       role: 'user', 
       content: input, 
@@ -86,6 +95,9 @@ export default function ChatWidgetPage() {
         id: (Date.now() + 1).toString(),
         timestamp: Date.now()
       }]);
+      
+      // Track successful assistant reply
+      track('chat_assistant_replied');
     } catch (err) {
       console.error('Error:', err);
       setError('Failed to get response. Please try again.');
