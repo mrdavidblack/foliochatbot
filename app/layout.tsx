@@ -6,8 +6,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Next.js + TypeScript + Tailwind',
-  description: 'A modern web app built with Next.js, TypeScript, and Tailwind CSS',
+  title: 'Folio Chatbot',
+  description: 'David Black’s folio chatbot with tailored case study responses and analytics.',
 }
 
 export default function RootLayout({

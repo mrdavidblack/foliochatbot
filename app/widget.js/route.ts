@@ -26,9 +26,9 @@ export async function GET(req: Request) {
       'position:fixed',
       'right:16px',
       'bottom:16px',
-      'width:56px',
-      'height:56px',
-      'border-radius:50%',
+      'min-height:56px',
+      'padding:14px 22px',
+      'border-radius:999px',
       'background:#040711',
       'color:#fff',
       'border:none',
@@ -37,11 +37,19 @@ export async function GET(req: Request) {
       'z-index:9999',
       'display:inline-flex',
       'align-items:center',
-      'justify-content:center'
+      'justify-content:center',
+      'gap:12px',
+      'font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif',
+      'font-size:15px',
+      'font-weight:500',
+      'line-height:1'
     ].join(';');
 
-    // Icon (HAL 9000 eye)
-    btn.innerHTML = '<span style="display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="14" fill="#1a1a1a" stroke="#666" stroke-width="1"/><circle cx="16" cy="16" r="10" fill="#cc0000"/><circle cx="16" cy="16" r="6" fill="#ff3333"/><circle cx="18" cy="14" r="2" fill="#ff6666" opacity="0.8"/></svg></span>';
+    // Icon (HAL 9000 eye) with label
+    btn.innerHTML = [
+      '<span style="color:#f5f7ff;white-space:nowrap;">Chat to me</span>',
+      '<span style="display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="14" fill="#1a1a1a" stroke="#666" stroke-width="1"/><circle cx="16" cy="16" r="10" fill="#cc0000"/><circle cx="16" cy="16" r="6" fill="#ff3333"/><circle cx="18" cy="14" r="2" fill="#ff6666" opacity="0.8"/></svg></span>'
+    ].join('');
 
     // Panel (open state)
     const frame = document.createElement('iframe');
