@@ -29,7 +29,7 @@ export async function GET(req: Request) {
       'min-height:56px',
       'padding:14px 22px',
       'border-radius:999px',
-      'background:#040711',
+      'background:#0c0f19',
       'color:#fff',
       'border:none',
       'box-shadow:0 8px 20px rgba(0,0,0,.25)',
